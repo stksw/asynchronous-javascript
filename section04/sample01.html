@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <script>
+      const asyncFunction = () => {
+        let promise = new Promise(function (resolve, reject) {
+          // first execution
+          resolve("result value1");
+        });
+
+        console.log(promise);
+
+        promise
+          .then(function (val) {
+            // second execution
+            console.log(`${val}2`);
+            return val;
+          })
+          .then(function (val) {
+            // third execution
+            console.log(`${val}3`);
+          });
+      };
+    </script>
+  </body>
+</html>
