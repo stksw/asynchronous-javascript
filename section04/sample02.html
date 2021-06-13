@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <script>
+      // return promise object function
+      let asyncFunction = () => {
+        return new Promise(function (resolve, reject) {
+          // first execution
+          resolve("result value1");
+        });
+      };
+
+      let promise = asyncFunction();
+      promise.then(function (val) {
+        console.log(val);
+      });
+    </script>
+  </body>
+</html>
